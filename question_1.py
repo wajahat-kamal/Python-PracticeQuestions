@@ -6,7 +6,7 @@ def login(users):
     username = input("Enter your username: ")
     password = input("Enter your password: ")
     if username in users:
-        if password in users.values():
+        if password == users[username]:
             print("Login Successfull!")
     else:
         print("Invalid Credentials")
