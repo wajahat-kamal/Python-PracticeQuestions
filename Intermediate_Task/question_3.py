@@ -4,11 +4,10 @@ marks = [78, 85, 62, 90, 55]
 
 
 def result_system(marks):
-    if len(marks) == 0: return
-    total_marks = 0
-    for n in marks:
-        total_marks += n
+    if len(marks) == 0:
+        return "No marks provided"
 
+    total_marks = sum(marks)
     percentage = (total_marks / (len(marks) * 100)) * 100
     grade = ""
 
