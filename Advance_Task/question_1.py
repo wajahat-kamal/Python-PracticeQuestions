@@ -1,9 +1,10 @@
 # Mini Invoice Generator
 
 products = []
-num = int(input("How many Products? "))
 
-def invoice_generator(products, num):
+def invoice_generator(products):
+    num = int(input("How many Products? "))
+
     for i in range(num):
         name = input("Enter product name: ")
         price = int(input("Enter product price: "))
@@ -26,4 +27,4 @@ def invoice_generator(products, num):
     print(f"{'Final amount:':<20} {final_amount}")
 
 
-invoice_generator(products, num)
+invoice_generator(products)
