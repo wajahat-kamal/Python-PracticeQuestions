@@ -2,14 +2,15 @@
 
 attendance = ["present", "absent", "present", "present", "absent"]
 
-present = []
-absent = []
 
-for i in attendance:
-    if i == "present":
-        present.append(i)
-    else:
-        absent.append(i)
+def attendance_tracker(attendance):
+    present = []
+    absent = []
 
-print(present)
-print(absent)
+    for i in attendance:
+        if i == "present":
+            present.append(i)
+        else:
+            absent.append(i)
+
+    f"Present {len(present)} \n Absent {len(absent)}"
