@@ -1,5 +1,5 @@
 products = []
-num = int(input("How many Products: "))
+num = int(input("How many Products? "))
 
 for i in range(num):
     name = input("Enter product name: ")
@@ -15,8 +15,11 @@ for product in products:
     print(f"{product['name']} X {product['qty']} = {subTotal}")
 
 tax = total * 0.10
-discount = (total * 0.5) if total >= 5000 else 0
-final_cost = total + tax - discount
+discount = (total * 0.05) if total >= 5000 else 0
+final_amount = total + tax - discount
 
 
-print(final_cost)
+print(f"\nTotal before tax: {total}")
+print(f"\nTax (10%): {tax}")
+print(f"\nDiscount (5%): {discount}")
+print(f"Finall amount: {final_amount}")
