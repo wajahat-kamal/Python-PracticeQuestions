@@ -4,6 +4,7 @@ marks = [78, 85, 62, 90, 55]
 
 
 def result_system(marks):
+    if len(marks) == 0: return
     total_marks = 0
     for n in marks:
         total_marks += n
@@ -20,7 +21,7 @@ def result_system(marks):
     else:
         grade = "Fail"
 
-    return f"Total Marks: {total_marks} \nPercentage: {percentage} \nGrade: {grade}"
+    return f"Total Marks: {total_marks} \nPercentage: {percentage}% \nGrade: {grade}"
 
 
 print(result_system(marks))
