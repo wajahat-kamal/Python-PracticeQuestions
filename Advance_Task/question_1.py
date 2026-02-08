@@ -2,6 +2,7 @@
 
 products = []
 
+
 def invoice_generator(products):
     num = int(input("How many Products? "))
 
@@ -21,10 +22,7 @@ def invoice_generator(products):
     discount = round(total * 0.05 if total >= 5000 else 0, 2)
     final_amount = round(total + tax - discount, 2)
 
-    print(f"{'Total before tax:':<20} {total}")
-    print(f"{'Tax (10%):':<20} {tax}")
-    print(f"{'Discount (5%):':<20} {discount}")
-    print(f"{'Final amount:':<20} {final_amount}")
+    return (f"Total before tax: {total}\nTax (10%): {tax}\nDiscount (5%): {discount}\nFinal amount: {final_amount}" )
 
 
-invoice_generator(products)
+print(invoice_generator(products))
