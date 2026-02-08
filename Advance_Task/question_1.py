@@ -12,14 +12,11 @@ total = 0
 for product in products:
     subTotal = product["price"] * product["qty"]
     total += subTotal
-    print(f"{product["name"]} X {product["qty"]} = {subTotal}")
+    print(f"{product['name']} X {product['qty']} = {subTotal}")
 
-tax = total - (total * 0.10)
-total += tax
-
-if total >= 1000:
-    discount = total - (total * 0.5)
-    total += discount
+tax = total * 0.10
+discount = (total * 0.5) if total >= 5000 else 0
+final_cost = total + tax - discount
 
 
-print(total)
+print(final_cost)
