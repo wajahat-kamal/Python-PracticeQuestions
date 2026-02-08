@@ -2,12 +2,10 @@
 
 users = ["ali", "sara", "umer", "wajahat", "kamal"]
 
-def check_user(users):
-    user = input("Enter your name: ")
 
-    if user in users:
-        return "User Exists"
-    else:
-        return "User not found"
+def check_user(users):
+    username = input("Enter your name: ")
+    return "User Exists" if username in users else "User not found"
+
 
 print(check_user(users))
