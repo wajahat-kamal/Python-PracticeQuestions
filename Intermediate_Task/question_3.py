@@ -8,7 +8,7 @@ def result_system(marks):
     for n in marks:
         total_marks += n
 
-    percentage = (total_marks / ()) * 100
+    percentage = (total_marks / (len(marks) * 100)) * 100
     grade = ""
 
     if percentage >= 80:
