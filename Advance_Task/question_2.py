@@ -4,13 +4,18 @@ attendance = ["present", "absent", "present", "present", "absent"]
 
 
 def attendance_tracker(attendance):
-    present = []
-    absent = []
+    present = 0
+    absent = 0
 
     for i in attendance:
         if i == "present":
-            present.append(i)
+            present += 1
         else:
-            absent.append(i)
+            absent += 1
 
-    f"Present {len(present)} \n Absent {len(absent)}"
+    return (
+        f"Total Students are: {len(attendance)} \n Present {present} \n Absent {absent}"
+    )
+
+
+print(attendance_tracker(attendance))
