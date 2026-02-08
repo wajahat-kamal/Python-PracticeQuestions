@@ -13,10 +13,11 @@ def transaction_analyzer(transactions):
         else:
             debit += abs(transaction)
     
+    warning = ""
     if total_balance < 0:
-        "Warning: Your balance is negative!"
+        warning = "Warning: Your balance is negative!"
 
-    return f"Total Credit: {credit} \nTotal Debit: {debit} \nTotal Balance: {total_balance}"
+    return f"Total Credit: {credit} \nTotal Debit: {debit} \nTotal Balance: {total_balance} \n {warning}"
 
 
 print(transaction_analyzer(transactions))
