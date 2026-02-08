@@ -9,9 +9,14 @@ for i in range(num):
 
 
 total = 0
-subTotal = price * qty
-tax = subTotal + (subTotal * 0.10)
+for product in products:
+    subTotal = product["price"] * product["qty"]
+    total += subTotal
+
+tax = total - (total * 0.10)
 total += tax
+
+
 
 if total >= 1000:
     discount = total - (total * 0.5)
