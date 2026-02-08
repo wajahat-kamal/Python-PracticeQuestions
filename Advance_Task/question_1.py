@@ -14,9 +14,9 @@ for product in products:
     total += subTotal
     print(f"{product['name']} X {product['qty']} = {subTotal}")
 
-tax = total * 0.10
-discount = (total * 0.05) if total >= 5000 else 0
-final_amount = total + tax - discount
+tax = round(total * 0.10, 2)
+discount = round(total * 0.05 if total >= 5000 else 0, 2)
+final_amount = round(total + tax - discount, 2)
 
 
 print(f"\nTotal before tax: {total}")
