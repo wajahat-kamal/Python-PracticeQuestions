@@ -5,7 +5,7 @@ prices = [250, 100, 340, 120]
 def sum(prices):
     total = 0
     for price in prices:
-        sum += price
+        total += price
 
     return f"Total bill is {total}"
 
