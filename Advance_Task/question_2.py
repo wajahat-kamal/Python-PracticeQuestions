@@ -11,7 +11,7 @@ def attendance_tracker(attendance):
         if i == "present":
             present += 1
 
-    percentage = (present / total) * 100
+    percentage = round((present / total) * 100)
 
     return f"Total Students are: {total} \n Present {present} \n Absent {total - present} \n Attendance Percentage: {percentage}%"
 
