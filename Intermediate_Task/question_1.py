@@ -22,7 +22,7 @@ def invoice_generator(products):
     discount = round(total * 0.05 if total >= 5000 else 0, 2)
     final_amount = round(total + tax - discount, 2)
 
-    return (f"Total before tax: {total}\nTax (10%): {tax}\nDiscount (5%): {discount}\nFinal amount: {final_amount}" )
+    return f"Total before tax: {total}\nTax (10%): {tax}\nDiscount (5%): {discount}\nFinal amount: {final_amount}"
 
 
 print(invoice_generator(products))
