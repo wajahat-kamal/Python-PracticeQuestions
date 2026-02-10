@@ -20,7 +20,7 @@ def issue_tracker(books):
         f"Issued Limit Reached" if issued_books >= 3 else "You can issue more books"
     )
 
-    return f"Total Books: {len(books)} \nIssued Books: {issued_books} \Available Books: {len(books) - issued_books} \n{status}"
+    return f"Total Books: {len(books)} \nIssued Books: {issued_books} \nAvailable Books: {len(books) - issued_books} \n{status}"
 
 
 print(issue_tracker(books))
