@@ -8,3 +8,15 @@ books = [
     {"name": "Node.js Essentials", "status": "available"}
 ]
 
+def issue_tracker(books):
+    issued_books = 0;
+
+    for book in books:
+        if book["status"] == "issued":
+            issued_books += 1;
+
+    status = "Limit Reached" if issued_books >= 3 else ""
+
+    return f"Total Books: {len(books)} \nIssued Books: {issued_books} \nAvaliabe Books: {len(books) - issued_books} \n{status}"
+
+print(issue_tracker(books))
