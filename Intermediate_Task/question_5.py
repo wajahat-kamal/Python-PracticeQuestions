@@ -5,18 +5,22 @@ books = [
     {"name": "JavaScript Guide", "status": "available"},
     {"name": "Data Structures", "status": "issued"},
     {"name": "React Handbook", "status": "issued"},
-    {"name": "Node.js Essentials", "status": "available"}
+    {"name": "Node.js Essentials", "status": "available"},
 ]
 
+
 def issue_tracker(books):
-    issued_books = 0;
+    issued_books = 0
 
     for book in books:
         if book["status"] == "issued":
-            issued_books += 1;
+            issued_books += 1
 
-    status = "Limit Reached" if issued_books >= 3 else ""
+        status = (
+            f"Limit Reached {book}" if issued_books >= 3 else "You can issue more books"
+        )
 
-    return f"Total Books: {len(books)} \nIssued Books: {issued_books} \nAvaliabe Books: {len(books) - issued_books} \n{status}"
+    return f"Total Books: {len(books)} \nIssued Books: {issued_books} \Available Books: {len(books) - issued_books} \n{status}"
+
 
 print(issue_tracker(books))
