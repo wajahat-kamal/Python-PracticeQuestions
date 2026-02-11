@@ -5,6 +5,11 @@ amount = int(input("Enter your amount: "))
 
 
 def atm_withdrawal_system(balance, amount):
-    pass
+    if amount <= 0:
+        return "Invalid Amount"
+    if balance < amount:
+        return "Insufficient Balance"
+
+
 
 print(atm_withdrawal_system(balance, amount))
