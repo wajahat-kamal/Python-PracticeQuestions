@@ -11,8 +11,9 @@ def atm_withdrawal_system(balance, amount):
         return "Insufficient Balance"
 
 
-    new_balance = balance - amount
     transaction_fee = round(amount * 0.02, 2) 
+    total_deduction = amount + transaction_fee
+    new_balance = balance - total_deduction
 
     return f"Updated Balance: {new_balance} \nTransaction Fee 2%: {transaction_fee}"
 
